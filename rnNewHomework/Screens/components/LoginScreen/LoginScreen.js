@@ -48,10 +48,10 @@ const LoginScreen = () => {
 
   const onLogin = () => {
     if (!email.trim() || !password.trim()) {
-      Alert.alert(`Все поля должны быть заполнены!`);
+      Alert.alert(`Усі поля мають бути заповнені!`);
       return;
     }
-    Alert.alert(`${email}, успешно вошли!`);
+    Alert.alert(`${email}, успішно увійшли!`);
     console.log("email" - email, "password" - password);
 
     setEmail("");
@@ -108,7 +108,7 @@ const LoginScreen = () => {
                 }}
               >
                 <View style={{ width: phoneWidth - 16 * 2 }}>
-                  <Text style={styles.title}>Войти</Text>
+                  <Text style={styles.title}>Увійти</Text>
 
                   <TextInput
                     style={{
@@ -150,11 +150,11 @@ const LoginScreen = () => {
                     </Text>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.button} onPress={onLogin}>
-                    <Text style={styles.textButton}>Войти</Text>
+                    <Text style={styles.textButton}>Увійти</Text>
                   </TouchableOpacity>
                   <TouchableOpacity>
                     <Text style={styles.footer}>
-                      Нет аккаунта? Зарегистрироваться
+                    Немає облікового запису? Зареєструватись
                     </Text>
                   </TouchableOpacity>
                 </View>

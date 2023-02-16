@@ -55,10 +55,10 @@ const RegistrationScreen = () => {
 
   const onLogin = () => {
     if (!login.trim() || !email.trim() || !password.trim()) {
-      Alert.alert(`Все поля должны быть заполнены!`);
+      Alert.alert(`Усі поля мають бути заповнені!`);
       return;
     }
-    Alert.alert(`${login}, успешно зарегистрированы!`);
+    Alert.alert(`${login}, успішно зареєстровані!`);
     console.log("login" - login, "email" - email, "password" - password);
     setLogin("");
     setEmail("");
@@ -122,7 +122,7 @@ const RegistrationScreen = () => {
                   <Add />
                 </TouchableOpacity>
                 <View style={{ width: phoneWidth - 16 * 2 }}>
-                  <Text style={styles.title}>Регистрация</Text>
+                  <Text style={styles.title}>Реєстрація</Text>
                   <TextInput
                     style={{
                       ...styles.input,
@@ -131,7 +131,7 @@ const RegistrationScreen = () => {
                     onFocus={() => setFocusLogin(true)}
                     onBlur={() => setFocusLogin(false)}
                     value={login}
-                    placeholder="Логин"
+                    placeholder="Логін"
                     cursorColor={"#BDBDBD"}
                     placeholderTextColor={"#BDBDBD"}
                     onChangeText={loginSave}
@@ -144,7 +144,7 @@ const RegistrationScreen = () => {
                     onFocus={() => setIsFocusEmail(true)}
                     onBlur={() => setIsFocusEmail(false)}
                     value={email}
-                    placeholder="Адрес электронной почты"
+                    placeholder="Адреса електронної пошти"
                     cursorColor={"#BDBDBD"}
                     placeholderTextColor={"#BDBDBD"}
                     onChangeText={emailSave}
@@ -171,14 +171,14 @@ const RegistrationScreen = () => {
                     }
                   >
                     <Text style={styles.isPasswordShow}>
-                      {isPasswordHidden ? "Показать" : "Скрыть"}
+                      {isPasswordHidden ? "Показати" : "Приховати"}
                     </Text>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.button} onPress={onLogin}>
-                    <Text style={styles.buttonText}>Зарегистрироваться</Text>
+                    <Text style={styles.buttonText}>Зареєструватись</Text>
                   </TouchableOpacity>
                   <TouchableOpacity>
-                    <Text style={styles.footer}>Уже есть аккаунт? Войти</Text>
+                    <Text style={styles.footer}>Вже є обліковий запис? Увійти</Text>
                   </TouchableOpacity>
                 </View>
               </View>
